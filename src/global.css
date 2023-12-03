@@ -86,6 +86,16 @@ header > div > button[type="submit"] {
   font-size: large;
   cursor: pointer;
   padding: 8px;
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
+
+button[type="submit"] {
+  transition: all 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  filter: invert(1);
 }
 
 @media screen and (max-width: 1024px) {
@@ -279,4 +289,40 @@ button {
   border-bottom: none;
   padding-bottom: 0;
   margin-bottom: 0;
+}
+
+.articles-container > article > h3 {
+  cursor: pointer;
+}
+
+.gallery {
+  margin-top: 5vh;
+  display: flex;
+  gap: 20vw;
+  margin-left: 35vw;
+  height: 30vw;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.gallery > img {
+  object-fit: cover;
+  width: 30vw;
+  aspect-ratio: 1/1;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+  .gallery {
+    margin-left: 25vw;
+    gap: 20vw;
+    height: 50vw;
+  }
+  .gallery > img {
+    width: 50vw;
+  }
+}
+
+.inactive {
+  filter: brightness(50%) blur(2px);
 }

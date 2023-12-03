@@ -52,7 +52,7 @@
       </nav>
       <div class="search">
         <input type="text" placeholder="Search..." />
-        <button type="submit" aria-label="Submit button">
+        <button id="submit-search" type="submit" aria-label="Submit button">
           <i class="fas fa-magnifying-glass"></i>
         </button>
       </div>
@@ -62,11 +62,80 @@
         <img src="../assets/images/hp-wallpaper.jpg" alt="" />
         <h1 class="hero-title">Welcome to Hogwarts</h1>
       </section>
+      <section id="gallery" class="gallery">
+        <img
+          src="https://boutique-magic-effect.com/wp-content/uploads/2021/11/Harry-Potter-Jeux-de-cartes-par-Theory11-rouge.jpg"
+          alt=""
+        />
+        <img
+          class="inactive"
+          src="https://images1.vinted.net/t/02_019ed_b9Jb2w7Ss9PqEDMA8cyiezp7/f800/1689406357.jpeg?s=f03c1851c3f5d5349cbd1353c94cf8874bba029b"
+          alt=""
+        />
+        <img
+          class="inactive"
+          src="https://i.redd.it/a0d7mf8ydha31.jpg"
+          alt=""
+        />
+        <img
+          class="inactive"
+          src="https://m.media-amazon.com/images/I/A19OSh+TQeL.jpg"
+          alt=""
+        />
+        <img
+          class="inactive"
+          src="https://www.gazette-du-sorcier.com/wp-content/uploads/2022/07/20210214_1422151-1024x768.jpg"
+          alt=""
+        />
+        <img
+          class="inactive"
+          src="https://tools.toywiz.com/_images/_webp/_products/lg/hapocagabset.webp"
+          alt=""
+        />
+      </section>
+      <script async>
+        const gallery = document.getElementById("gallery");
+        let image = 1;
+
+        function rotate() {
+          window.marginvalue = window.innerWidth < 1024 ? 25 : 35;
+          window.offsetvalue = window.innerWidth < 1024 ? -70 : -50;
+          if (image != 6) {
+            [...gallery.children].forEach((img) => {
+              img.classList.add("inactive");
+            });
+            gallery.children[image].classList.remove("inactive");
+            gallery.style.marginLeft = `${
+              image * window.offsetvalue + window.marginvalue
+            }vw`;
+            image++;
+          } else {
+            gallery.children[0].classList.remove("inactive");
+            gallery.style.marginLeft = `${window.marginvalue}vw`;
+            image = 1;
+          }
+        }
+
+        setInterval(rotate, 3000);
+      </script>
       <section class="main-content">
         <div class="about">
           <h2>About</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci reiciendis molestias ab nam corporis quaerat consectetur minus. Enim sequi saepe harum repellendus cum voluptate porro culpa dolore aliquam magnam quam velit, explicabo accusamus officia consequuntur iusto dignissimos eius deleniti nostrum expedita ratione architecto quae natus! Minus ipsa officiis repudiandae inventore omnis? Explicabo labore, nihil deleniti incidunt amet magnam omnis adipisci ex nesciunt natus atque iure ab dolorem veniam officiis id fugiat cum voluptatem qui. Recusandae quo esse consectetur, iure sunt voluptates consequatur fugit quia cumque deleniti, voluptatibus obcaecati pariatur. Assumenda quam optio libero minus excepturi, consequuntur voluptates, atque dolore adipisci eligendi culpa itaque unde eaque, quod placeat recusandae. Eveniet neque eaque laboriosam illo ea pariatur quas alias sed architecto commodi.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+            reiciendis molestias ab nam corporis quaerat consectetur minus. Enim
+            sequi saepe harum repellendus cum voluptate porro culpa dolore
+            aliquam magnam quam velit, explicabo accusamus officia consequuntur
+            iusto dignissimos eius deleniti nostrum expedita ratione architecto
+            quae natus! Minus ipsa officiis repudiandae inventore omnis?
+            Explicabo labore, nihil deleniti incidunt amet magnam omnis adipisci
+            ex nesciunt natus atque iure ab dolorem veniam officiis id fugiat
+            cum voluptatem qui. Recusandae quo esse consectetur, iure sunt
+            voluptates consequatur fugit quia cumque deleniti, voluptatibus
+            obcaecati pariatur. Assumenda quam optio libero minus excepturi,
+            consequuntur voluptates, atque dolore adipisci eligendi culpa itaque
+            unde eaque, quod placeat recusandae. Eveniet neque eaque laboriosam
+            illo ea pariatur quas alias sed architecto commodi.
           </p>
         </div>
         <div class="contact">
@@ -85,14 +154,39 @@
               placeholder="Your message"
             ></textarea>
             <button type="submit">Send</button>
+          </form>
         </div>
         <div class="news">
           <h2>News</h2>
           <div class="articles-container">
-            <article><h3>Titre</h3><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, iure.</p></article>
-            <article><h3>Titre</h3><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, iure.</p></article>
-            <article><h3>Titre</h3><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, iure.</p></article>
-            <article><h3>Titre</h3><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, iure.</p></article>
+            <article>
+              <h3>Titre</h3>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Facilis, iure.
+              </p>
+            </article>
+            <article>
+              <h3>Titre</h3>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Facilis, iure.
+              </p>
+            </article>
+            <article>
+              <h3>Titre</h3>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Facilis, iure.
+              </p>
+            </article>
+            <article>
+              <h3>Titre</h3>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Facilis, iure.
+              </p>
+            </article>
           </div>
         </div>
       </section>

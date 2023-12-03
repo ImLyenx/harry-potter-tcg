@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="global.css" />
+    <script
+      defer
+      src="https://kit.fontawesome.com/aa06e5f929.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta name="description" content="Harry Potter Trading Card Game" />
+    <link
+      rel="shortcut icon"
+      href="../assets/images/logo.png"
+      type="image/x-icon"
+    />
+    <title>Harry Potter TCG</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="../assets/images/logo.png" alt="" />
+      </div>
+      <nav>
+        <ul class="navbar-list">
+          <li>
+            <a href="/src/">
+              <i class="fas fa-house"></i>
+              <span class="nav-link">Home</span></a
+            >
+          </li>
+          <li>
+            <a href="/src/rules/"
+              ><i class="fas fa-clipboard-check"></i
+              ><span class="nav-link">Rules</span></a
+            >
+          </li>
+          <li>
+            <a href="/src/cards/"
+              ><i class="fas fa-sheet-plastic"></i
+              ><span class="nav-link">Cards</span></a
+            >
+          </li>
+          <li>
+            <a href="/src/resume/"
+              ><i class="fas fa-user-graduate"></i
+              ><span class="nav-link">CV</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="search">
+        <input type="text" placeholder="Search..." />
+        <button type="submit" aria-label="Submit button">
+          <i class="fas fa-magnifying-glass"></i>
+        </button>
+      </div>
+    </header>
+    <main>
+      <section class="hero-image">
+        <img src="../assets/images/hp-wallpaper.jpg" alt="" />
+        <h1 class="hero-title">Welcome to Hogwarts</h1>
+      </section>
+      <section class="main-content">
+        <div class="about">
+          <h2>About</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci reiciendis molestias ab nam corporis quaerat consectetur minus. Enim sequi saepe harum repellendus cum voluptate porro culpa dolore aliquam magnam quam velit, explicabo accusamus officia consequuntur iusto dignissimos eius deleniti nostrum expedita ratione architecto quae natus! Minus ipsa officiis repudiandae inventore omnis? Explicabo labore, nihil deleniti incidunt amet magnam omnis adipisci ex nesciunt natus atque iure ab dolorem veniam officiis id fugiat cum voluptatem qui. Recusandae quo esse consectetur, iure sunt voluptates consequatur fugit quia cumque deleniti, voluptatibus obcaecati pariatur. Assumenda quam optio libero minus excepturi, consequuntur voluptates, atque dolore adipisci eligendi culpa itaque unde eaque, quod placeat recusandae. Eveniet neque eaque laboriosam illo ea pariatur quas alias sed architecto commodi.
+          </p>
+        </div>
+        <div class="contact">
+          <h2>Contact</h2>
+          <form action="">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Your name" />
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Your email" />
+            <label for="message">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="Your message"
+            ></textarea>
+            <button type="submit">Send</button>
+        </div>
+        <div class="news">
+          <h2>News</h2>
+          <div class="articles-container">
+            <article><h3>Titre</h3><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, iure.</p></article>
+            <article><h3>Titre</h3><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, iure.</p></article>
+            <article><h3>Titre</h3><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, iure.</p></article>
+            <article><h3>Titre</h3><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, iure.</p></article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="socials">
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+      <div class="legal">
+        <a href="#">Terms of Use</a>
+        <p>&middot;</p>
+        <a href="#">Privacy Policy</a>
+      </div>
+      <div class="copyright">
+        <p>&copy; Eric Hubert, <span id="copy-date"></span></p>
+      </div>
+      <script defer>
+        document.getElementById("copy-date").innerText =
+          new Date().getFullYear();
+      </script>
+    </footer>
+  </body>
+</html>

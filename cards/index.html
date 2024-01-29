@@ -62,75 +62,39 @@
       <div>
         <img
           class="card-img"
-          src="../../assets/images/cards/card-harry-potter.png"
+          src="../../assets/images/cards/HarryPotter.png"
           alt=""
         />
         <h4>Harry Potter</h4>
       </div>
-      <div>
-        <img
-          class="card-img"
-          src="../../assets/images/cards/card-harry-potter.png"
-          alt=""
-        />
-        <h4>Harry Potter</h4>
-      </div>
-      <div>
-        <img
-          class="card-img"
-          src="../../assets/images/cards/card-harry-potter.png"
-          alt=""
-        />
-        <h4>Harry Potter</h4>
-      </div>
-      <div>
-        <img
-          class="card-img"
-          src="../../assets/images/cards/card-harry-potter.png"
-          alt=""
-        />
-        <h4>Harry Potter</h4>
-      </div>
-      <div>
-        <img
-          class="card-img"
-          src="../../assets/images/cards/card-harry-potter.png"
-          alt="test"
-        />
-        <h4>Harry Potter</h4>
-      </div>
-      <div>
-        <img
-          class="card-img"
-          src="../../assets/images/cards/card-harry-potter.png"
-          alt=""
-        />
-        <h4>Harry Potter</h4>
-      </div>
-      <div>
-        <img
-          class="card-img"
-          src="../../assets/images/cards/card-harry-potter.png"
-          alt=""
-        />
-        <h4>Harry Potter</h4>
-      </div>
-      <div>
-        <img
-          class="card-img"
-          src="../../assets/images/cards/card-harry-potter.png"
-          alt=""
-        />
-        <h4>Harry Potter</h4>
-      </div>
-      <div>
-        <img
-          class="card-img"
-          src="../../assets/images/cards/card-harry-potter.png"
-          alt=""
-        />
-        <h4>Harry Potter</h4>
-      </div>
+      <script>
+        const createCards = async () => {
+          try {
+            const response = await fetch("./image_data.json");
+            const data = await response.json();
+            const imageData = data.images;
+            const container = document.querySelector(".cards-container");
+            console.log(imageData);
+
+            imageData.forEach((element) => {
+              container.appendChild(document.createElement("div"));
+              const div = container.lastChild;
+              let img = document.createElement("img");
+              img.classList.add("card-img");
+              img.src = `../assets/images/cards/${element.filename}`;
+              img.alt = element.character_name;
+              div.appendChild(img);
+              let title = document.createElement("h4");
+              title.innerText = element.character_name;
+              div.appendChild(title);
+            });
+          } catch (error) {
+            console.error("Erreur lors du traitement des images :", error);
+          }
+        };
+
+        createCards();
+      </script>
     </main>
     <footer>
       <div class="socials">

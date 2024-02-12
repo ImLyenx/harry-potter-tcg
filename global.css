@@ -351,6 +351,12 @@ button {
   .burger-icon {
     display: block !important;
   }
+  #submit-search {
+    display: none;
+  }
+  #searchInput {
+    max-width: 40vw !important;
+  }
 }
 
 #burger-toggle {

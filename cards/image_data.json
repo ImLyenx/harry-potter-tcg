@@ -1,89 +1,90 @@
 {
+  "tags": ["adult", "gryffindor", "hufflepuff", "ravenclaw", "slytherin"],
   "images": [
     {
       "filename": "aDracoMalfoy.png",
       "character_name": "Draco Malfoy 1",
-      "tags": []
+      "tags": ["slytherin"]
     },
     {
       "filename": "aHermioneGranger.png",
       "character_name": "Hermione Granger 1",
-      "tags": []
+      "tags": ["gryffindor"]
     },
     {
       "filename": "AlbusDumbledore.png",
       "character_name": "Albus Dumbledore",
-      "tags": []
+      "tags": ["adult"]
     },
     {
       "filename": "AliciaSpinnet.png",
       "character_name": "Alicia Spinnet",
-      "tags": []
+      "tags": ["gryffindor"]
     },
     {
       "filename": "AngelinaJohnson.png",
       "character_name": "Angelina Johnson",
-      "tags": []
+      "tags": ["gryffindor"]
     },
     {
       "filename": "ArgusFilch.png",
       "character_name": "Argus Filch",
-      "tags": []
+      "tags": ["adult"]
     },
     {
       "filename": "ArmandoDippet.png",
       "character_name": "Armando Dippet",
-      "tags": []
+      "tags": ["adult"]
     },
     {
       "filename": "ArthurWeasley.png",
       "character_name": "Arthur Weasley",
-      "tags": []
+      "tags": ["adult"]
     },
     {
       "filename": "bDracoMalfoy.png",
       "character_name": "Draco Malfoy 2",
-      "tags": []
+      "tags": ["slytherin"]
     },
     {
       "filename": "bHermioneGranger.png",
       "character_name": "Hermione Granger 2",
-      "tags": []
+      "tags": ["gryffindor"]
     },
     {
       "filename": "CedricDiggory.png",
       "character_name": "Cedric Diggory",
-      "tags": []
+      "tags": ["gryffindor"]
     },
     {
       "filename": "ChoChang.png",
       "character_name": "Cho Chang",
-      "tags": []
+      "tags": ["gryffindor"]
     },
     {
       "filename": "ColinCreevey.png",
       "character_name": "Colin Creevey",
-      "tags": []
+      "tags": ["gryffindor"]
     },
     {
       "filename": "CorneliusFudge.png",
       "character_name": "Cornelius Fudge",
-      "tags": []
+      "tags": ["adult"]
     },
     {
       "filename": "CrabbeAndGoyle.png",
       "character_name": "Crabbe And Goyle",
-      "tags": []
+      "tags": ["slytherin"]
     },
     {
       "filename": "DeanThomas.png",
       "character_name": "Dean Thomas",
-      "tags": []
+      "tags": ["gryffindor"]
     },
     {
       "filename": "DerrickAndBole.png",
       "character_name": "Derrick And Bole",
-      "tags": []
+      "tags": ["slytherin"]
     },
     {
       "filename": "Dobby.png",
@@ -93,332 +94,332 @@
     {
       "filename": "DracoMalfoy.png",
       "character_name": "Draco Malfoy",
-      "tags": []
+      "tags": ["slytherin"]
     },
     {
       "filename": "DracoMalfoySlytherin.png",
       "character_name": "Draco Malfoy Slytherin",
-      "tags": []
+      "tags": ["slytherin"]
     },
     {
       "filename": "DracotheSeeker.png",
       "character_name": "Dracothe Seeker",
-      "tags": []
+      "tags": ["slytherin"]
     },
     {
       "filename": "FatFriar.png",
       "character_name": "Fat Friar",
-      "tags": []
+      "tags": ["adult"]
     },
     {
       "filename": "FilchHogwartsCaretaker.png",
       "character_name": "Filch Hogwarts Caretaker",
-      "tags": []
+      "tags": ["adult"]
     },
     {
       "filename": "Fred&GeorgeWeasley.png",
       "character_name": "Fred & George Weasley",
-      "tags": []
+      "tags": ["gryffindor"]
     },
     {
       "filename": "FredGeorgeBeaters.png",
       "character_name": "Fred George Beaters",
-      "tags": []
+      "tags": ["gryffindor"]
     },
     {
       "filename": "GinnyWeasley.png",
       "character_name": "Ginny Weasley",
-      "tags": []
+      "tags": ["gryffindor"]
     },
     {
       "filename": "GodricGryffindor.png",
       "character_name": "Godric Gryffindor",
-      "tags": []
+      "tags": ["gryffindor"]
     },
     {
       "filename": "Griphook.png",
       "character_name": "Griphook",
-      "tags": []
+      "tags": ["adult"]
     },
     {
       "filename": "HagridKeeperofKeys.png",
       "character_name": "Hagrid Keeperof Keys",
-      "tags": []
+      "tags": ["adult"]
     },
     {
       "filename": "HannahAbbott.png",
       "character_name": "Hannah Abbott",
-      "tags": []
+      "tags": ["gryffindor"]
     },
     {
       "filename": "HarryPotter.png",
       "character_name": "Harry Potter",
-      "tags": []
+      "tags": ["gryffindor"]
     },
     {
       "filename": "HarrySecondYear.png",
       "character_name": "Harry Second Year",
-      "tags": []
+      "tags": ["gryffindor"]
     },
     {
       "filename": "HarrytheSeeker.png",
       "character_name": "Harry the Seeker",
-      "tags": []
+      "tags": ["gryffindor"]
     },
     {
       "filename": "HarryTriumphant.png",
       "character_name": "Harry Triumphant",
-      "tags": []
+      "tags": ["gryffindor"]
     },
     {
       "filename": "HarryYoungMarauder.png",
       "character_name": "Harry Young Marauder",
-      "tags": []
+      "tags": ["gryffindor"]
     },
     {
       "filename": "HelgaHufflepuff.png",
       "character_name": "Helga Hufflepuff",
-      "tags": []
+      "tags": ["adult", "hufflepuff"]
     },
     {
       "filename": "HermioneGranger.png",
       "character_name": "Hermione Granger",
-      "tags": []
+      "tags": ["gryffindor"]
     },
     {
       "filename": "HermioneOverworkedStudent.png",
       "character_name": "Hermione Overworked Student",
-      "tags": []
+      "tags": ["gryffindor"]
     },
     {
       "filename": "HermionePotionMaker.png",
       "character_name": "Hermione Potion Maker",
-      "tags": []
+      "tags": ["gryffindor"]
     },
     {
       "filename": "HermioneTopStudent.png",
       "character_name": "Hermione Top Student",
-      "tags": []
+      "tags": ["gryffindor"]
     },
     {
       "filename": "JustinFinchFletchley.png",
       "character_name": "Justin Finch Fletchley",
-      "tags": []
+      "tags": ["hufflepuff"]
     },
     {
       "filename": "KatieBell.png",
       "character_name": "Katie Bell",
-      "tags": []
+      "tags": ["gryffindor"]
     },
     {
       "filename": "LeeJordan.png",
       "character_name": "Lee Jordan",
-      "tags": []
+      "tags": ["gryffindor"]
     },
     {
       "filename": "LuciusMalfoy.png",
       "character_name": "Lucius Malfoy",
-      "tags": []
+      "tags": ["adult"]
     },
     {
       "filename": "MadamIrmaPince.png",
       "character_name": "Madam Irma Pince",
-      "tags": []
+      "tags": ["adult"]
     },
     {
       "filename": "MadamPomfrey.png",
       "character_name": "Madam Pomfrey",
-      "tags": []
+      "tags": ["adult"]
     },
     {
       "filename": "MadamRolandaHooch.png",
       "character_name": "Madam Rolanda Hooch",
-      "tags": []
+      "tags": ["adult"]
     },
     {
       "filename": "MadamRosmerta.png",
       "character_name": "Madam Rosmerta",
-      "tags": []
+      "tags": ["adult"]
     },
     {
       "filename": "MarcusFlint.png",
       "character_name": "Marcus Flint",
-      "tags": []
+      "tags": ["slytherin"]
     },
     {
       "filename": "MillicentBulstrode.png",
       "character_name": "Millicent Bulstrode",
-      "tags": []
+      "tags": ["slytherin"]
     },
     {
       "filename": "MoaningMyrtle.png",
       "character_name": "Moaning Myrtle",
-      "tags": []
+      "tags": ["adult"]
     },
     {
       "filename": "MollyWeasley.png",
       "character_name": "Molly Weasley",
-      "tags": []
+      "tags": ["adult"]
     },
     {
       "filename": "NearlyHeadlessNick.png",
       "character_name": "Nearly Headless Nick",
-      "tags": []
+      "tags": ["adult"]
     },
     {
       "filename": "NevilleLongbottom.png",
       "character_name": "Neville Longbottom",
-      "tags": []
+      "tags": ["gryffindor"]
     },
     {
       "filename": "OliverTheCaptain.png",
       "character_name": "Oliver The Captain",
-      "tags": []
+      "tags": ["gryffindor"]
     },
     {
       "filename": "OliverWood.png",
       "character_name": "Oliver Wood",
-      "tags": []
+      "tags": ["gryffindor"]
     },
     {
       "filename": "Peeves.png",
       "character_name": "Peeves",
-      "tags": []
+      "tags": ["adult"]
     },
     {
       "filename": "PercyWeasley.png",
       "character_name": "Percy Weasley",
-      "tags": []
+      "tags": ["gryffindor"]
     },
     {
       "filename": "ProfessorFiliusFlitwick.png",
       "character_name": "Professor Filius Flitwick",
-      "tags": []
+      "tags": ["adult"]
     },
     {
       "filename": "ProfessorPomonaSprout.png",
       "character_name": "Professor Pomona Sprout",
-      "tags": []
+      "tags": ["adult"]
     },
     {
       "filename": "ProfessorQuirinusQuirrell.png",
       "character_name": "Professor Quirinus Quirrell",
-      "tags": []
+      "tags": ["adult"]
     },
     {
       "filename": "ProfessorRemusLupin.png",
       "character_name": "Professor Remus Lupin",
-      "tags": []
+      "tags": ["adult"]
     },
     {
       "filename": "ProfessorRubeusHagrid.png",
       "character_name": "Professor Rubeus Hagrid",
-      "tags": []
+      "tags": ["adult"]
     },
     {
       "filename": "ProfessorSeverousSnape.png",
       "character_name": "Professor Severous Snape",
-      "tags": []
+      "tags": ["slytherin"]
     },
     {
       "filename": "ProfessorSybillTrelawney.png",
       "character_name": "Professor Sybill Trelawney",
-      "tags": []
+      "tags": ["adult"]
     },
     {
       "filename": "ProfFlitwickCharmsMaster.png",
       "character_name": "Prof Flitwick Charms Master",
-      "tags": []
+      "tags": ["adult"]
     },
     {
       "filename": "ProfGilderoyLockhart.png",
       "character_name": "Prof Gilderoy Lockhart",
-      "tags": []
+      "tags": ["adult"]
     },
     {
       "filename": "ProfMinervaMcGonagall.png",
       "character_name": "Prof Minerva McGonagall",
-      "tags": []
+      "tags": ["adult"]
     },
     {
       "filename": "RogerDavies.png",
       "character_name": "Roger Davies",
-      "tags": []
+      "tags": ["ravenclaw"]
     },
     {
       "filename": "RontheBrave.png",
       "character_name": "Ronthe Brave",
-      "tags": []
+      "tags": ["gryffindor"]
     },
     {
       "filename": "RonWeasley.png",
       "character_name": "Ron Weasley",
-      "tags": []
+      "tags": ["gryffindor"]
     },
     {
       "filename": "RonYoungestBrother.png",
       "character_name": "Ron Youngest Brother",
-      "tags": []
+      "tags": ["gryffindor"]
     },
     {
       "filename": "RowenaRavenclaw.png",
       "character_name": "Rowena Ravenclaw",
-      "tags": []
+      "tags": ["adult", "ravenclaw"]
     },
     {
       "filename": "RubeusHagrid.png",
       "character_name": "Rubeus Hagrid",
-      "tags": []
+      "tags": ["adult"]
     },
     {
       "filename": "SalazarSlytherin.png",
       "character_name": "Salazar Slytherin",
-      "tags": []
+      "tags": ["slytherin"]
     },
     {
       "filename": "SeamusFinnigan.png",
       "character_name": "Seamus Finnigan",
-      "tags": []
+      "tags": ["slytherin"]
     },
     {
       "filename": "SirCadogan.png",
       "character_name": "Sir Cadogan",
-      "tags": []
+      "tags": ["adult"]
     },
     {
       "filename": "SiriusBlack.png",
       "character_name": "Sirius Black",
-      "tags": []
+      "tags": ["adult"]
     },
     {
       "filename": "StanShunpike.png",
       "character_name": "Stan Shunpike",
-      "tags": []
+      "tags": ["adult"]
     },
     {
       "filename": "TheFamousHarryPotter.png",
       "character_name": "The Famous Harry Potter",
-      "tags": []
+      "tags": ["gryffindor"]
     },
     {
       "filename": "TheFatLady.png",
       "character_name": "The Fat Lady",
-      "tags": []
+      "tags": ["gryffindor"]
     },
     {
       "filename": "TheWeasleyTwins.png",
       "character_name": "The Weasley Twins",
-      "tags": []
+      "tags": ["gryffindor"]
     },
     {
       "filename": "TomMarvoloRiddle.png",
       "character_name": "Tom Marvolo Riddle",
-      "tags": []
+      "tags": ["slytherin"]
     },
     {
       "filename": "WaldenMacnair.png",
       "character_name": "Walden Macnair",
-      "tags": []
+      "tags": ["adult"]
     }
   ]
 }

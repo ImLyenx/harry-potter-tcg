@@ -43,20 +43,45 @@
               ><span class="nav-link">Cards</span></a
             >
           </li>
-          <li>
-            <a href="/about/"
-              ><i class="fas fa-user-graduate"></i
-              ><span class="nav-link">CV</span></a
-            >
-          </li>
         </ul>
       </nav>
-      <div class="search">
-        <input type="text" placeholder="Search..." />
-        <button id="submit-search" type="submit" aria-label="Submit button">
-          <i class="fas fa-magnifying-glass"></i>
-        </button>
+      <input type="checkbox" id="burger-toggle" />
+      <label for="burger-toggle" class="burger-icon">
+        <i class="fas fa-bars"></i>
+      </label>
+      <div class="burger-menu">
+        <ul class="burger-menu-list">
+          <li>
+            <a href="/">
+              <i class="fas fa-house"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="/rules/">
+              <i class="fas fa-clipboard-check"></i>
+              <span>Rules</span>
+            </a>
+          </li>
+          <li>
+            <a href="/cards/">
+              <i class="fas fa-sheet-plastic"></i>
+              <span>Cards</span>
+            </a>
+          </li>
+        </ul>
       </div>
+      <script defer>
+        const burgerToggle = document.getElementById("burger-toggle");
+        const burgerMenu = document.querySelector(".burger-menu");
+        burgerToggle.addEventListener("change", () => {
+          if (burgerToggle.checked) {
+            burgerMenu.style.transform = "scaleY(1)";
+          } else {
+            burgerMenu.style.transform = "scaleY(0)";
+          }
+        });
+      </script>
     </header>
     <main>
       <section class="rules">

@@ -43,57 +43,179 @@
               ><span class="nav-link">Cards</span></a
             >
           </li>
-          <li>
-            <a href="/resume/"
-              ><i class="fas fa-user-graduate"></i
-              ><span class="nav-link">CV</span></a
-            >
-          </li>
         </ul>
       </nav>
-      <div class="search">
-        <input type="text" placeholder="Search..." />
+      <form class="search">
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="Search..."
+          oninput="search()"
+        />
         <button id="submit-search" type="submit" aria-label="Submit button">
           <i class="fas fa-magnifying-glass"></i>
         </button>
+      </form>
+      <script>
+        function search() {
+          const searchTerm = document
+            .getElementById("searchInput")
+            .value.toLowerCase();
+
+          const cards = document.querySelectorAll(".card-img");
+          cards.forEach((card) => {
+            const alt = card.getAttribute("alt").toLowerCase();
+            if (alt.includes(searchTerm)) {
+              card.parentElement.style.display = "flex";
+            } else {
+              card.parentElement.style.display = "none";
+            }
+          });
+        }
+      </script>
+      <input type="checkbox" id="burger-toggle" />
+      <label for="burger-toggle" class="burger-icon">
+        <i class="fas fa-bars"></i>
+      </label>
+      <div class="burger-menu">
+        <ul class="burger-menu-list">
+          <li>
+            <a href="/">
+              <i class="fas fa-house"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="/rules/">
+              <i class="fas fa-clipboard-check"></i>
+              <span>Rules</span>
+            </a>
+          </li>
+          <li>
+            <a href="/cards/">
+              <i class="fas fa-sheet-plastic"></i>
+              <span>Cards</span>
+            </a>
+          </li>
+        </ul>
       </div>
+      <script defer>
+        const burgerToggle = document.getElementById("burger-toggle");
+        const burgerMenu = document.querySelector(".burger-menu");
+        burgerToggle.addEventListener("change", () => {
+          if (burgerToggle.checked) {
+            burgerMenu.style.transform = "scaleY(1)";
+          } else {
+            burgerMenu.style.transform = "scaleY(0)";
+          }
+        });
+      </script>
     </header>
-    <main class="cards-container">
-      <div>
+    <div class="big-title">
+      <h1>Characters</h1>
+      <div class="tags-container"></div>
+    </div>
+    <main class="cards-container" id="cards-container">
+      <!-- <div>
         <img
           class="card-img"
           src="../../assets/images/cards/HarryPotter.png"
           alt=""
         />
         <h4>Harry Potter</h4>
-      </div>
+      </div> -->
       <script>
         const createCards = async () => {
           try {
             const response = await fetch("./image_data.json");
             const data = await response.json();
+            const tagList = data.tags;
             const imageData = data.images;
             const container = document.querySelector(".cards-container");
-            console.log(imageData);
+            // console.log(imageData);
 
+            function formatCheckboxTitle(string) {
+              return " " + string.charAt(0).toUpperCase() + string.slice(1);
+            }
+
+            tagList.forEach((element) => {
+              const tagsContainer = document.querySelector(".tags-container");
+              const tag = document.createElement("label");
+              tag.classList.add("tag");
+              const checkbox = document.createElement("input");
+              checkbox.type = "checkbox";
+              checkbox.value = element;
+              checkbox.addEventListener("change", () => {
+                const cards = document.querySelectorAll(".card-img");
+                const checkedTags = Array.from(
+                  document.querySelectorAll(".tag input:checked")
+                ).map((checkbox) => checkbox.value);
+                cards.forEach((card) => {
+                  if (
+                    checkedTags.length === 0 ||
+                    checkedTags.some((tag) => card.classList.contains(tag))
+                  ) {
+                    card.parentElement.style.display = "flex";
+                  } else {
+                    card.parentElement.style.display = "none";
+                  }
+                });
+              });
+              tag.appendChild(checkbox);
+              tag.appendChild(
+                document.createTextNode(formatCheckboxTitle(element))
+              );
+              tagsContainer.appendChild(tag);
+            });
+
+            let i = 1;
             imageData.forEach((element) => {
               container.appendChild(document.createElement("div"));
               const div = container.lastChild;
+              div.id = i;
+              div.classList.add("card");
+              div.addEventListener("click", () => {
+                window.location.href = `?id=${div.id}`;
+              });
               let img = document.createElement("img");
               img.classList.add("card-img");
               img.src = `../assets/images/cards/${element.filename}`;
               img.alt = element.character_name;
+              element.tags.forEach((tag) => img.classList.add(tag));
               div.appendChild(img);
               let title = document.createElement("h4");
               title.innerText = element.character_name;
               div.appendChild(title);
+              i++;
+              // console.log(i);
             });
+            showOnlyOneCard();
           } catch (error) {
             console.error("Erreur lors du traitement des images :", error);
           }
         };
 
         createCards();
+
+        function showOnlyOneCard() {
+          const urlParams = new URLSearchParams(window.location.search);
+          const id = urlParams.get("id");
+
+          if (id) {
+            console.log("id");
+            const cards = document.querySelectorAll(".card");
+            console.log(cards);
+            cards.forEach((card) => {
+              if (card.id !== id) {
+                console.log("a" + card.id);
+                card.classList.add("card-hidden");
+              }
+            });
+            document
+              .getElementById("cards-container")
+              .classList.add("cards-container-onlyone");
+          }
+        }
       </script>
     </main>
     <footer>

@@ -3,24 +3,29 @@
   padding: 0;
   box-sizing: border-box;
   font-family: roboto, sans-serif;
+
+  --bg-color: #333;
+  --text-color: #fff;
 }
+
 @font-face {
   font-family: harrypotter;
   src: url("../assets/fonts/harrypotter.ttf");
 }
 
 body {
-  background-color: #333;
-  color: #fff;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 header {
-  background-color: #333;
-  color: #fff;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   padding: 32px;
   text-align: center;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo > img {
@@ -32,9 +37,11 @@ header {
 nav {
   display: flex;
   align-items: center;
-  background-color: #333;
-  color: #fff;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   font-size: x-large;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .navbar-list {
@@ -69,7 +76,7 @@ header > div {
   margin-right: 1.5vw;
 }
 
-header > div > input[type="text"] {
+header > form > input[type="text"] {
   padding: 8px;
   border-radius: 8px;
   border: none;
@@ -78,7 +85,7 @@ header > div > input[type="text"] {
   max-width: 15vw;
 }
 
-header > div > button[type="submit"] {
+header > form > button[type="submit"] {
   padding: 8px;
   border-radius: 8px;
   border: none;
@@ -160,13 +167,13 @@ footer {
   display: flex;
   gap: 24px;
   flex-direction: column;
-  background-color: #333;
+  background-color: var(--bg-color);
   justify-content: center;
   align-items: center;
 }
 footer > div {
   display: flex;
-  color: #fff;
+  color: var(--text-color);
 }
 
 footer > div:nth-of-type(1) {
@@ -183,7 +190,7 @@ footer > div:nth-last-of-type(1) {
 }
 
 .socials > a {
-  color: white;
+  color: var(--text-color);
   font-size: xx-large;
 }
 
@@ -194,7 +201,7 @@ footer > div:nth-last-of-type(1) {
 
 .legal > a,
 .legal > p {
-  color: white;
+  color: var(--text-color);
   font-size: large;
   text-decoration: none;
 }
@@ -216,6 +223,9 @@ a:hover {
 }
 
 @media screen and (max-width: 1024px) {
+  nav {
+    display: none;
+  }
   .main-content {
     flex-direction: column;
     margin-left: 10vw;
@@ -325,4 +335,44 @@ button {
 
 .inactive {
   filter: brightness(50%) blur(2px);
+}
+
+@media screen and (max-width: 1024px) {
+  .burger-menu-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+  }
+  .burger-menu-list > li > a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .burger-icon {
+    display: block !important;
+  }
+}
+
+#burger-toggle {
+  display: none !important;
+}
+.burger-icon {
+  font-size: xx-large !important;
+  display: none;
+}
+
+.burger-menu {
+  transform: scaleY(0);
+  flex-direction: column;
+  position: absolute;
+  top: 10vh;
+  right: 5vw;
+  padding: 16px;
+  border-radius: 15px;
+  background-color: #222;
+  z-index: 100;
+  cursor: pointer;
+  font-size: x-large;
+  transition: all 0.3s ease-in-out;
+  /* background-color: red; */
 }

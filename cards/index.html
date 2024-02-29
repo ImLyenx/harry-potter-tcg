@@ -127,10 +127,9 @@
       <script>
         const createCards = async () => {
           try {
-            const response = await fetch("./image_data.json");
+            const response = await fetch("./data.json");
             const data = await response.json();
             const tagList = data.tags;
-            const imageData = data.images;
             const container = document.querySelector(".cards-container");
             // console.log(imageData);
 
@@ -168,25 +167,29 @@
               tagsContainer.appendChild(tag);
             });
 
-            let i = 1;
+            const imageResponse = await fetch(
+              "https://hp-api.ep.lyenx.com/cards"
+            );
+            const imageData = await imageResponse.json();
             imageData.forEach((element) => {
               container.appendChild(document.createElement("div"));
               const div = container.lastChild;
-              div.id = i;
+              div.id = element.id;
               div.classList.add("card");
               div.addEventListener("click", () => {
                 window.location.href = `?id=${div.id}`;
               });
               let img = document.createElement("img");
               img.classList.add("card-img");
-              img.src = `../assets/images/cards/${element.filename}`;
-              img.alt = element.character_name;
-              element.tags.forEach((tag) => img.classList.add(tag));
+              img.src = `https://hp-api.ep.lyenx.com/images/${element.image}`;
+              img.alt = element.name;
+              element.tags
+                .split(",")
+                .forEach((tag) => (tag ? img.classList.add(tag) : null));
               div.appendChild(img);
               let title = document.createElement("h4");
-              title.innerText = element.character_name;
+              title.innerText = element.name;
               div.appendChild(title);
-              i++;
               // console.log(i);
             });
             showOnlyOneCard();

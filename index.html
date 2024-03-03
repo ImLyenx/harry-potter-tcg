@@ -71,17 +71,28 @@
           </li>
         </ul>
       </div>
+      <!-- 
       <script defer>
+        // Get the burger toggle element by its ID
         const burgerToggle = document.getElementById("burger-toggle");
+
+        // Get the burger menu element by its class
         const burgerMenu = document.querySelector(".burger-menu");
+
+        // Add an event listener to the burger toggle
+        // When the state of the toggle changes, this function will be called
         burgerToggle.addEventListener("change", () => {
+          // If the toggle is checked, show the burger menu
           if (burgerToggle.checked) {
             burgerMenu.style.transform = "scaleY(1)";
-          } else {
+          } 
+          // If the toggle is not checked, hide the burger menu
+          else {
             burgerMenu.style.transform = "scaleY(0)";
           }
         });
-      </script>
+      </script> 
+      -->
     </header>
     <main>
       <section class="hero-image">
@@ -120,28 +131,41 @@
         />
       </section>
       <script async type="module">
+        // Get the gallery element by its ID
         const gallery = document.getElementById("gallery");
+        // Initialize the image index
         let image = 1;
 
+        // Define the rotate function
         function rotate() {
+          // Set the margin and offset values based on the window width
           window.marginvalue = window.innerWidth < 1024 ? 25 : 35;
           window.offsetvalue = window.innerWidth < 1024 ? -70 : -50;
+          // If the image index is not 6
           if (image != 6) {
+            // Add the "inactive" class to all images in the gallery
             [...gallery.children].forEach((img) => {
               img.classList.add("inactive");
             });
+            // Remove the "inactive" class from the current image
             gallery.children[image].classList.remove("inactive");
+            // Adjust the margin of the gallery
             gallery.style.marginLeft = `${
               image * window.offsetvalue + window.marginvalue
             }vw`;
+            // Increment the image index
             image++;
           } else {
+            // If the image index is 6, remove the "inactive" class from the first image
             gallery.children[0].classList.remove("inactive");
+            // Reset the margin of the gallery
             gallery.style.marginLeft = `${window.marginvalue}vw`;
+            // Reset the image index
             image = 1;
           }
         }
 
+        // Call the rotate function every 3 seconds
         setInterval(rotate, 3000);
       </script>
       <section class="main-content">
@@ -164,14 +188,23 @@
             illo ea pariatur quas alias sed architecto commodi.
           </p>
         </div>
+        <!-- This is the contact section -->
         <div class="contact">
+          <!-- The heading of the contact section -->
           <h2>Contact</h2>
+          <!-- The form for the contact section -->
           <form>
+            <!-- The label for the name input field -->
             <label for="name">Name</label>
+            <!-- The input field for the name -->
             <input type="text" id="name" placeholder="Your name" />
+            <!-- The label for the email input field -->
             <label for="email">Email</label>
+            <!-- The input field for the email -->
             <input type="email" id="email" placeholder="Your email" />
+            <!-- The label for the message textarea -->
             <label for="message">Message</label>
+            <!-- The textarea for the message -->
             <textarea
               name="message"
               id="message"
@@ -179,6 +212,7 @@
               rows="10"
               placeholder="Your message"
             ></textarea>
+            <!-- The submit button for the form -->
             <button type="submit">Send</button>
           </form>
         </div>
@@ -217,24 +251,36 @@
         </div>
       </section>
     </main>
+    <!-- Start of Footer -->
     <footer>
+      <!-- Social Media Links -->
       <div class="socials">
+        <!-- YouTube Link -->
         <a href="#"><i class="fab fa-youtube"></i></a>
+        <!-- Twitter Link -->
         <a href="#"><i class="fab fa-twitter"></i></a>
+        <!-- Instagram Link -->
         <a href="#"><i class="fab fa-instagram"></i></a>
       </div>
+      <!-- Legal Links -->
       <div class="legal">
+        <!-- Terms of Use Link -->
         <a href="#">Terms of Use</a>
         <p>&middot;</p>
+        <!-- Privacy Policy Link -->
         <a href="#">Privacy Policy</a>
       </div>
+      <!-- Copyright Information -->
       <div class="copyright">
+        <!-- Copyright Text -->
         <p>&copy; Eric Hubert, <span id="copy-date"></span></p>
       </div>
+      <!-- Script to Display Current Year -->
       <script async type="module">
         document.getElementById("copy-date").innerText =
           new Date().getFullYear();
       </script>
     </footer>
+    <!-- End of Footer -->
   </body>
 </html>

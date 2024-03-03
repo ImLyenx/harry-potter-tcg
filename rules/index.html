@@ -19,24 +19,30 @@
     <title>Rules</title>
   </head>
   <body>
+    <!-- Header section starts here -->
     <header>
+      <!-- Logo section -->
       <div class="logo">
-        <img src="../assets/images/logo.png" alt="" />
+        <img src="../assets/images/logo.png" alt="Logo" />
       </div>
+      <!-- Navigation bar -->
       <nav>
         <ul class="navbar-list">
+          <!-- Home link -->
           <li>
             <a href="/">
               <i class="fas fa-house"></i>
               <span class="nav-link">Home</span></a
             >
           </li>
+          <!-- Rules link -->
           <li>
             <a href="/rules/"
               ><i class="fas fa-clipboard-check"></i
               ><span class="nav-link">Rules</span></a
             >
           </li>
+          <!-- Cards link -->
           <li>
             <a href="/cards/"
               ><i class="fas fa-sheet-plastic"></i
@@ -45,24 +51,30 @@
           </li>
         </ul>
       </nav>
+      <!-- Burger menu toggle checkbox -->
       <input type="checkbox" id="burger-toggle" />
+      <!-- Burger menu icon -->
       <label for="burger-toggle" class="burger-icon">
         <i class="fas fa-bars"></i>
       </label>
+      <!-- Burger menu list -->
       <div class="burger-menu">
         <ul class="burger-menu-list">
+          <!-- Home link -->
           <li>
             <a href="/">
               <i class="fas fa-house"></i>
               <span>Home</span>
             </a>
           </li>
+          <!-- Rules link -->
           <li>
             <a href="/rules/">
               <i class="fas fa-clipboard-check"></i>
               <span>Rules</span>
             </a>
           </li>
+          <!-- Cards link -->
           <li>
             <a href="/cards/">
               <i class="fas fa-sheet-plastic"></i>
@@ -71,6 +83,7 @@
           </li>
         </ul>
       </div>
+      <!-- Script to handle burger menu toggle -->
       <script defer>
         const burgerToggle = document.getElementById("burger-toggle");
         const burgerMenu = document.querySelector(".burger-menu");
@@ -83,6 +96,7 @@
         });
       </script>
     </header>
+    <!-- Header section ends here -->
     <main>
       <section class="rules">
         <h1>Rules</h1>
@@ -148,18 +162,23 @@
           repellendus.
         </p>
       </section>
+
+      <!-- This is the start of the reviews section. -->
       <section class="reviews">
         <h1>Reviews</h1>
         <div>
+          <!-- This is a review by Lina Pope. -->
           <div class="review">
             <h2>Lina Pope</h2>
             <div class="review-rating">
+              <!-- These are the star ratings for the review. -->
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
               <i class="fas fa-star-half-alt"></i>
               <i class="far fa-star"></i>
               <i class="far fa-star"></i>
             </div>
+            <!-- This is the text of the review. -->
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Distinctio nemo cum corrupti quisquam est ad itaque veritatis
@@ -167,15 +186,19 @@
               expedita explicabo saepe ut rem, modi nobis perferendis.
             </p>
           </div>
+
+          <!-- This is a review by Vernon Fowler. -->
           <div class="review">
             <h2>Vernon Fowler</h2>
             <div class="review-rating">
+              <!-- These are the star ratings for the review. -->
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
               <i class="fas fa-star-half-alt"></i>
               <i class="far fa-star"></i>
             </div>
+            <!-- This is the text of the review. -->
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid
               cumque sunt distinctio nemo, sint ab veritatis unde exercitationem
@@ -184,15 +207,19 @@
               quia quaerat.
             </p>
           </div>
+
+          <!-- This is a review by Arthur Brooks. -->
           <div class="review">
             <h2>Arthur Brooks</h2>
             <div class="review-rating">
+              <!-- These are the star ratings for the review. -->
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
               <i class="far fa-star"></i>
             </div>
+            <!-- This is the text of the review. -->
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
               vitae a reiciendis excepturi quidem asperiores animi eligendi,
@@ -203,21 +230,32 @@
           </div>
         </div>
       </section>
+
+      <!-- This is the main content area. -->
     </main>
+
+    <!-- This is the footer of the page. -->
     <footer>
+      <!-- This is the social media links section. -->
       <div class="socials">
         <a href="#"><i class="fab fa-youtube"></i></a>
         <a href="#"><i class="fab fa-twitter"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
       </div>
+
+      <!-- This is the legal links section. -->
       <div class="legal">
         <a href="#">Terms of Use</a>
         <p>&middot;</p>
         <a href="#">Privacy Policy</a>
       </div>
+
+      <!-- This is the copyright notice. -->
       <div class="copyright">
         <p>&copy; Eric Hubert, <span id="copy-date"></span></p>
       </div>
+
+      <!-- This is a script that sets the copyright year. -->
       <script async type="module">
         document.getElementById("copy-date").innerText =
           new Date().getFullYear();
